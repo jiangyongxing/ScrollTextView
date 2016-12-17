@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
         initData();
         scrollTextView = (ScrollTextView) findViewById(R.id.scrolltextview);
         scrollTextView.setTextList(dataList);
-        scrollTextView.start();
     }
 
     private void initData() {
@@ -28,5 +27,17 @@ public class MainActivity extends AppCompatActivity {
         for(int i = 0;i<10;i++){
             dataList.add("这是一个滚动的Text View----"+i);
         }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        scrollTextView.stop();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        scrollTextView.start();
     }
 }
