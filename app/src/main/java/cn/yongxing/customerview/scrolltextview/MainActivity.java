@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void initData() {
         dataList = new ArrayList<>();
-        for(int i = 0;i<10;i++){
-            dataList.add("这是一个滚动的Text View----"+i);
+        for (int i = 0; i < 10; i++) {
+            dataList.add("这是一个滚动的Text View----" + i);
         }
     }
 
